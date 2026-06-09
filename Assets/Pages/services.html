@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NH9BJQGL');</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K2485YDYNR"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-K2485YDYNR');</script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services — Sunflower Laundry Soap</title>
+  <meta name="description" content="Eco-friendly soap products, professional consultancy, soap-making tutorials and rescue laundry training from Sunflower Laundry Soap.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* ===== PAGE HERO ===== */
+    .page-hero {
+      background: var(--green);
+      padding: 80px 0 72px;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero::after {
+      content:'';
+      position:absolute;
+      width:440px;height:440px;
+      border-radius:50%;
+      border:1px solid rgba(232,160,32,.15);
+      right:-100px;top:-150px;
+      pointer-events:none;
+    }
+    .page-hero .container{position:relative;z-index:1;}
+    .page-hero-breadcrumb{display:flex;align-items:center;gap:8px;font-size:0.82rem;color:rgba(255,255,255,.5);margin-bottom:20px;}
+    .page-hero-breadcrumb a{color:rgba(255,255,255,.5);transition:color var(--transition);}
+    .page-hero-breadcrumb a:hover{color:var(--gold);}
+    .page-hero h1{color:var(--white);max-width:640px;}
+    .page-hero p{color:rgba(255,255,255,.7);font-size:1.05rem;max-width:520px;margin-top:16px;line-height:1.8;}
+
+    /* ===== SERVICE CATEGORIES ===== */
+    .service-categories { background: var(--linen); }
+    .cat-tabs {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 48px;
+      flex-wrap: wrap;
+    }
+    .cat-tab {
+      padding: 10px 22px;
+      border-radius: 50px;
+      font-size: 0.88rem;
+      font-weight: 500;
+      cursor: pointer;
+      border: 2px solid var(--border);
+      background: var(--white);
+      color: var(--mid);
+      transition: all var(--transition);
+    }
+    .cat-tab.active, .cat-tab:hover {
+      background: var(--green);
+      color: var(--white);
+      border-color: var(--green);
+    }
+
+    /* ===== FEATURED SERVICE ===== */
+    .featured-service {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+      background: var(--white);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      margin-bottom: 40px;
+    }
+    .featured-service-img {
+      height: 420px;
+      overflow: hidden;
+    }
+    .featured-service-img img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .featured-service:hover .featured-service-img img { transform: scale(1.04); }
+    .featured-service-body {
+      padding: 48px 48px 48px 0;
+    }
+    .featured-service-body .service-tag {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--sage);
+      margin-bottom: 12px;
+    }
+    .featured-service-body h2 { color: var(--green); margin-bottom: 16px; }
+    .featured-service-body p { color: var(--mid); line-height: 1.75; margin-bottom: 16px; }
+    .feature-list {
+      margin: 20px 0 28px;
+    }
+    .feature-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.9rem;
+      color: var(--ink);
+      margin-bottom: 10px;
+    }
+    .feature-list li i {
+      color: var(--gold);
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+
+    /* ===== SERVICE CARDS GRID ===== */
+    .services-grid-full {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .svc-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .svc-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+    .svc-card-img {
+      height: 200px;
+      overflow: hidden;
+      background: var(--green);
+    }
+    .svc-card-img img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .svc-card:hover .svc-card-img img { transform: scale(1.06); }
+    .svc-card-body {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .svc-badge {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--green);
+      background: var(--gold-light);
+      padding: 3px 10px;
+      border-radius: 50px;
+      margin-bottom: 12px;
+    }
+    .svc-card-body h3 { color: var(--green); margin-bottom: 10px; }
+    .svc-card-body p { font-size: 0.9rem; color: var(--mid); line-height: 1.65; flex: 1; }
+    .svc-card-footer {
+      padding: 0 24px 24px;
+    }
+    .svc-card-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 12px;
+      border-radius: 50px;
+      background: var(--green);
+      color: var(--white);
+      font-size: 0.88rem;
+      font-weight: 600;
+      transition: background var(--transition), transform var(--transition);
+    }
+    .svc-card-btn:hover { background: var(--gold); color: var(--green); transform: translateY(-1px); }
+
+    /* ===== PROCESS ===== */
+    .process-section { background: var(--green); padding: 80px 0; }
+    .process-section .section-head { margin-bottom: 56px; }
+    .process-section h2 { color: var(--white); }
+    .process-section .section-label { color: rgba(255,255,255,.5); }
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      position: relative;
+    }
+    /* Connecting line */
+    .process-steps::before {
+      content: '';
+      position: absolute;
+      top: 28px;
+      left: calc(12.5% + 12px);
+      right: calc(12.5% + 12px);
+      height: 2px;
+      background: rgba(232,160,32,.3);
+      z-index: 0;
+    }
+    .process-step {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+    .process-step-num {
+      width: 56px; height: 56px;
+      border-radius: 50%;
+      background: var(--gold);
+      color: var(--green);
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      display: grid;
+      place-items: center;
+      margin: 0 auto 20px;
+      box-shadow: 0 0 0 8px rgba(232,160,32,.15);
+    }
+    .process-step h3 { color: var(--white); margin-bottom: 8px; font-size: 1rem; }
+    .process-step p { font-size: 0.85rem; color: rgba(255,255,255,.6); line-height: 1.65; }
+
+    /* ===== CTA ===== */
+    .services-cta {
+      background: var(--gold-light);
+      padding: 72px 0;
+    }
+    .services-cta-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+    .services-cta h2 { color: var(--green); }
+    .services-cta p { color: var(--mid); max-width: 440px; margin-top: 10px; }
+    .services-cta-actions { display: flex; gap: 16px; flex-wrap: wrap; flex-shrink: 0; }
+
+    /* Responsive */
+    @media (max-width: 960px) {
+      .featured-service { grid-template-columns: 1fr; }
+      .featured-service-img { height: 300px; }
+      .featured-service-body { padding: 32px; }
+      .services-grid-full { grid-template-columns: 1fr 1fr; }
+      .process-steps { grid-template-columns: 1fr 1fr; }
+      .process-steps::before { display: none; }
+    }
+    @media (max-width: 640px) {
+      .services-grid-full { grid-template-columns: 1fr; }
+      .process-steps { grid-template-columns: 1fr; }
+      .services-cta-inner { flex-direction: column; text-align: center; }
+      .services-cta-actions { justify-content: center; width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NH9BJQGL" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="logo">
+          <img src="Images/SunflowerTransparent03.png" alt="Sunflower Laundry Soap logo">
+          <div class="logo-text-wrap">
+            <span class="logo-name">Sunflower</span>
+            <span class="logo-tag">Laundry Soap</span>
+          </div>
+        </a>
+        <nav aria-label="Main navigation">
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html" class="active">Services</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+          </ul>
+        </nav>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="mobile-nav" id="mobileNav" aria-hidden="true" role="dialog">
+    <div class="mobile-nav-backdrop" id="mobileBackdrop"></div>
+    <div class="mobile-nav-panel">
+      <button class="mobile-nav-close" id="mobileClose" aria-label="Close menu">&times;</button>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html" class="active">Services</a>
+      <a href="products.html">Products</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <div class="container">
+        <nav class="page-hero-breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span aria-hidden="true">›</span>
+          <span aria-current="page">Services</span>
+        </nav>
+        <h1>More than soap —<br>a complete clean solution</h1>
+        <p>From handcrafted eco-friendly bars to professional training and consultancy, we're here to help you clean smarter.</p>
+      </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section class="service-categories" aria-labelledby="svc-h2">
+      <div class="container">
+        <p class="section-label">What We Offer</p>
+        <h2 id="svc-h2" class="accent-heading" style="margin-bottom:36px;">Our services</h2>
+
+        <!-- Featured: Products -->
+        <div class="featured-service">
+          <div class="featured-service-img">
+            <img src="Images/20220825_102047.jpg" alt="Sunflower eco-friendly laundry soap bars" loading="lazy">
+          </div>
+          <div class="featured-service-body">
+            <p class="service-tag">⭐ Flagship Product</p>
+            <h2>Natural Laundry Bar Soap</h2>
+            <p>
+              Our signature handmade laundry bars are crafted from plant-derived oils and locally
+              sourced natural lye. They work powerfully on stains, ring-around-the-collar,
+              and ground-in dirt — without synthetic fragrance, phosphates, or bleach.
+            </p>
+            <ul class="feature-list" aria-label="Product features">
+              <li><i class="fas fa-check" aria-hidden="true"></i> Safe for sensitive skin and babies' clothes</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Works in cold and warm water</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> 100% biodegradable — safe for greywater</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Long-lasting bar — up to 40 washes per bar</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Minimal packaging, maximum performance</li>
+            </ul>
+            <a href="products.html" class="btn btn-primary">
+              <i class="fas fa-shopping-basket" aria-hidden="true"></i> Browse Products
+            </a>
+          </div>
+        </div>
+
+        <!-- Other service cards -->
+        <div class="services-grid-full">
+
+          <!-- Consultancy -->
+          <article class="svc-card">
+            <div class="svc-card-img">
+              <img src="Images/IMG_20220804_112948_1.jpg" alt="Professional soap consultancy" loading="lazy">
+            </div>
+            <div class="svc-card-body">
+              <span class="svc-badge">Consultancy</span>
+              <h3>On-Demand Consultancy</h3>
+              <p>
+                Get professional guidance on improving your laundry processes, sourcing natural
+                ingredients, or scaling a soap-making enterprise. Sessions are tailored to your
+                specific goals — individual, household, or business.
+              </p>
+            </div>
+            <div class="svc-card-footer">
+              <a href="https://wa.me/+256700610928?text=Hi%20Sunflower%2C%20I%27d%20like%20to%20book%20a%20consultancy%20session" target="_blank" rel="noopener" class="svc-card-btn">
+                <i class="fab fa-whatsapp" aria-hidden="true"></i> Book via WhatsApp
+              </a>
+            </div>
+          </article>
+
+          <!-- Training -->
+          <article class="svc-card">
+            <div class="svc-card-img">
+              <img src="Images/IMG_20220916_184459_9.jpg" alt="Rescue laundry training session" loading="lazy">
+            </div>
+            <div class="svc-card-body">
+              <span class="svc-badge">Training</span>
+              <h3>Retraining Rescue Lessons</h3>
+              <p>
+                Designed for laundry professionals, hotel housekeeping teams, and individuals looking to
+                upgrade their skills. Learn responsible washing techniques, stain management, and
+                environmentally friendly methods.
+              </p>
+            </div>
+            <div class="svc-card-footer">
+              <a href="https://wa.me/+256700610928?text=Hi%2C%20I%27m%20interested%20in%20Rescue%20Lessons" target="_blank" rel="noopener" class="svc-card-btn">
+                <i class="fab fa-whatsapp" aria-hidden="true"></i> Book via WhatsApp
+              </a>
+            </div>
+          </article>
+
+          <!-- Tutorials -->
+          <article class="svc-card">
+            <div class="svc-card-img">
+              <img src="Images/IMG-20220918-WA0035.jpg" alt="Soap making tutorial" loading="lazy">
+            </div>
+            <div class="svc-card-body">
+              <span class="svc-badge">Tutorial</span>
+              <h3>Soap-Making Tutorials</h3>
+              <p>
+                Hands-on, practical sessions that take you through the complete soap-making process —
+                from selecting plant oils and natural lye to curing and packaging your finished bar.
+                Perfect for aspiring artisans.
+              </p>
+            </div>
+            <div class="svc-card-footer">
+              <a href="https://wa.me/+256700610928?text=Hi%2C%20I%27d%20like%20to%20join%20a%20soap%20making%20tutorial" target="_blank" rel="noopener" class="svc-card-btn">
+                <i class="fab fa-whatsapp" aria-hidden="true"></i> Book via WhatsApp
+              </a>
+            </div>
+          </article>
+
+          <!-- Eco Audit -->
+          <article class="svc-card">
+            <div class="svc-card-img" style="background:var(--sage);display:grid;place-items:center;">
+              <i class="fas fa-leaf" style="font-size:3rem;color:rgba(255,255,255,.4);" aria-hidden="true"></i>
+            </div>
+            <div class="svc-card-body">
+              <span class="svc-badge">Eco</span>
+              <h3>Eco-Friendly Sourcing</h3>
+              <p>
+                We partner with local Ugandan farmers and suppliers to ensure every ingredient
+                in our products is traceable, sustainably harvested, and community-beneficial.
+                Ask us about sourcing for your own production.
+              </p>
+            </div>
+            <div class="svc-card-footer">
+              <a href="contact.html" class="svc-card-btn">
+                <i class="fas fa-envelope" aria-hidden="true"></i> Enquire Now
+              </a>
+            </div>
+          </article>
+
+          <!-- Gentle Fabrics -->
+          <article class="svc-card">
+            <div class="svc-card-img">
+              <img src="Images/IMG-20241030-WA0009.jpg" alt="Soap gentle on fabrics" loading="lazy">
+            </div>
+            <div class="svc-card-body">
+              <span class="svc-badge">Product</span>
+              <h3>Gentle Fabric Care</h3>
+              <p>
+                Our soap formulations are designed to clean deeply without stripping fabric fibres,
+                fading colours, or irritating skin — making them ideal for delicate garments, baby
+                clothes, and daily wear alike.
+              </p>
+            </div>
+            <div class="svc-card-footer">
+              <a href="products.html" class="svc-card-btn">
+                <i class="fas fa-shopping-basket" aria-hidden="true"></i> Shop Products
+              </a>
+            </div>
+          </article>
+
+          <!-- Wholesale -->
+          <article class="svc-card">
+            <div class="svc-card-img" style="background:var(--green);display:grid;place-items:center;">
+              <i class="fas fa-boxes" style="font-size:3rem;color:rgba(255,255,255,.3);" aria-hidden="true"></i>
+            </div>
+            <div class="svc-card-body">
+              <span class="svc-badge">Bulk Orders</span>
+              <h3>Wholesale Supply</h3>
+              <p>
+                Running a school, hotel, laundry business, or retail outlet? We supply in bulk
+                with flexible packaging and competitive pricing. Contact us to discuss quantities
+                and delivery options.
+              </p>
+            </div>
+            <div class="svc-card-footer">
+              <a href="contact.html" class="svc-card-btn">
+                <i class="fas fa-envelope" aria-hidden="true"></i> Get a Quote
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="process-section" aria-labelledby="process-h2">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-label" style="color:rgba(255,255,255,.45);">How It Works</p>
+          <h2 id="process-h2" style="color:var(--white);" class="accent-heading">Getting started is simple</h2>
+        </div>
+        <div class="process-steps">
+          <div class="process-step">
+            <div class="process-step-num" aria-hidden="true">1</div>
+            <h3>Reach Out</h3>
+            <p>Contact us via WhatsApp, phone, or our contact form. Tell us what you need.</p>
+          </div>
+          <div class="process-step">
+            <div class="process-step-num" aria-hidden="true">2</div>
+            <h3>We Advise</h3>
+            <p>We'll recommend the right product or service based on your goals and budget.</p>
+          </div>
+          <div class="process-step">
+            <div class="process-step-num" aria-hidden="true">3</div>
+            <h3>Book or Order</h3>
+            <p>Confirm your booking or place your order. We handle delivery or session scheduling.</p>
+          </div>
+          <div class="process-step">
+            <div class="process-step-num" aria-hidden="true">4</div>
+            <h3>Experience the Difference</h3>
+            <p>Clean naturally, learn new skills, or grow your business — with our full support.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES CTA -->
+    <section class="services-cta" aria-labelledby="svc-cta-h2">
+      <div class="container">
+        <div class="services-cta-inner">
+          <div>
+            <h2 id="svc-cta-h2">Not sure which service is right for you?</h2>
+            <p>Chat with us on WhatsApp and we'll point you in the right direction — no pressure, no commitment.</p>
+          </div>
+          <div class="services-cta-actions">
+            <a href="https://wa.me/+256700610928" target="_blank" rel="noopener" class="btn btn-primary">
+              <i class="fab fa-whatsapp" aria-hidden="true"></i> Chat on WhatsApp
+            </a>
+            <a href="contact.html" class="btn btn-outline">Send a Message</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" class="logo">
+              <img src="Images/SunflowerTransparent03.png" alt="" style="width:44px;height:44px;filter:brightness(0) invert(1);opacity:.8;">
+              <div class="logo-text-wrap">
+                <span class="logo-name">Sunflower</span>
+                <span class="logo-tag">Laundry Soap</span>
+              </div>
+            </a>
+            <p>Natural, handmade laundry soap crafted in Uganda. Gentle on clothes, kind to the earth.</p>
+            <div class="footer-socials">
+              <a href="https://wa.me/+256700610928" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+              <a href="https://www.facebook.com/profile.php?id=61556812120793" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.instagram.com/tutas.laundry.produc?igsh=MTRzZGk2ZmZlNGY5cw==" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="mailto:angura.resty@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Navigate</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contact</h4>
+            <ul>
+              <li><a href="tel:+256700610928">+256 700 610 928</a></li>
+              <li><a href="mailto:angura.resty@gmail.com">angura.resty@gmail.com</a></li>
+              <li><a href="https://wa.me/+256700610928" target="_blank" rel="noopener">WhatsApp Chat</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Sunflower Laundry Soap. All rights reserved.</p>
+          <p>Handmade in Uganda with love.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="float-bar" aria-label="Quick contact">
+    <a class="float-btn wa" href="https://wa.me/+256700610928" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    <a class="float-btn tel" href="tel:+256700610928" aria-label="Call"><i class="fas fa-phone"></i></a>
+    <a class="float-btn fb" href="https://www.facebook.com/profile.php?id=61556812120793" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+  </div>
+
+  <script>
+    const hamburger=document.getElementById('hamburger');
+    const mobileNav=document.getElementById('mobileNav');
+    const mobileClose=document.getElementById('mobileClose');
+    const backdrop=document.getElementById('mobileBackdrop');
+    function openNav(){mobileNav.classList.add('open');mobileNav.setAttribute('aria-hidden','false');hamburger.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';}
+    function closeNav(){mobileNav.classList.remove('open');mobileNav.setAttribute('aria-hidden','true');hamburger.setAttribute('aria-expanded','false');document.body.style.overflow='';}
+    hamburger.addEventListener('click',openNav);
+    mobileClose.addEventListener('click',closeNav);
+    backdrop.addEventListener('click',closeNav);
+    document.addEventListener('keydown',e=>{if(e.key==='Escape')closeNav();});
+  </script>
+</body>
+</html>

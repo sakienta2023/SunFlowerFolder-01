@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NH9BJQGL');</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K2485YDYNR"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-K2485YDYNR');</script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us — Sunflower Laundry Soap</title>
+  <meta name="description" content="Get in touch with Sunflower Laundry Soap — order products, book a training session, or ask us anything.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* ===== PAGE HERO ===== */
+    .page-hero {
+      background: var(--green);
+      padding: 80px 0 72px;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero::after {
+      content:'';position:absolute;
+      width:440px;height:440px;border-radius:50%;
+      border:1px solid rgba(232,160,32,.15);
+      right:-100px;top:-150px;pointer-events:none;
+    }
+    .page-hero .container{position:relative;z-index:1;}
+    .page-hero-breadcrumb{display:flex;align-items:center;gap:8px;font-size:0.82rem;color:rgba(255,255,255,.5);margin-bottom:20px;}
+    .page-hero-breadcrumb a{color:rgba(255,255,255,.5);transition:color var(--transition);}
+    .page-hero-breadcrumb a:hover{color:var(--gold);}
+    .page-hero h1{color:var(--white);max-width:640px;}
+    .page-hero p{color:rgba(255,255,255,.7);font-size:1.05rem;max-width:520px;margin-top:16px;line-height:1.8;}
+
+    /* ===== CONTACT GRID ===== */
+    .contact-section { background: var(--linen); }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      gap: 64px;
+      align-items: start;
+    }
+
+    /* ===== CONTACT INFO PANEL ===== */
+    .contact-info {
+      background: var(--green);
+      border-radius: var(--radius);
+      padding: 40px 36px;
+      color: rgba(255,255,255,.8);
+      position: sticky;
+      top: 92px;
+    }
+    .contact-info h2 {
+      color: var(--white);
+      font-size: 1.4rem;
+      margin-bottom: 8px;
+    }
+    .contact-info > p {
+      font-size: 0.9rem;
+      margin-bottom: 32px;
+      color: rgba(255,255,255,.6);
+      line-height: 1.7;
+    }
+    .contact-detail {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .contact-detail:last-of-type { margin-bottom: 0; }
+    .contact-detail-icon {
+      width: 40px; height: 40px;
+      border-radius: 10px;
+      background: rgba(255,255,255,.1);
+      display: grid;
+      place-items: center;
+      color: var(--gold);
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+    .contact-detail-text strong {
+      display: block;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: rgba(255,255,255,.45);
+      margin-bottom: 3px;
+    }
+    .contact-detail-text a, .contact-detail-text span {
+      font-size: 0.95rem;
+      color: var(--white);
+      transition: color var(--transition);
+    }
+    .contact-detail-text a:hover { color: var(--gold); }
+
+    .contact-divider {
+      width: 100%;
+      height: 1px;
+      background: rgba(255,255,255,.12);
+      margin: 28px 0;
+    }
+
+    .contact-social-label {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: rgba(255,255,255,.4);
+      margin-bottom: 14px;
+    }
+    .contact-socials {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .contact-socials a {
+      width: 38px; height: 38px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.08);
+      display: grid;
+      place-items: center;
+      color: rgba(255,255,255,.75);
+      font-size: 0.9rem;
+      transition: background var(--transition), color var(--transition);
+    }
+    .contact-socials a:hover { background: var(--gold); color: var(--green); }
+
+    /* ===== QUICK CONTACT BUTTONS ===== */
+    .quick-btns { margin-top: 24px; }
+    .quick-btn {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      width: 100%;
+      padding: 13px 18px;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+      transition: transform var(--transition), box-shadow var(--transition);
+      color: var(--white);
+    }
+    .quick-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,.2); }
+    .quick-btn.wa { background: #25D366; }
+    .quick-btn.tel { background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.2); }
+    .quick-btn i { font-size: 1.1rem; }
+
+    /* ===== CONTACT FORM ===== */
+    .contact-form-wrap {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 48px 40px;
+      box-shadow: var(--shadow);
+    }
+    .form-heading {
+      margin-bottom: 8px;
+    }
+    .form-subhead {
+      color: var(--mid);
+      font-size: 0.92rem;
+      margin-bottom: 32px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .form-field { margin-bottom: 20px; }
+    .form-field label {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 7px;
+      letter-spacing: .02em;
+    }
+    .form-field label .req {
+      color: var(--gold);
+      margin-left: 3px;
+    }
+    .form-field input,
+    .form-field select,
+    .form-field textarea {
+      width: 100%;
+      padding: 13px 16px;
+      border: 1.5px solid var(--border);
+      border-radius: 10px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.92rem;
+      color: var(--ink);
+      background: var(--linen);
+      outline: none;
+      transition: border-color var(--transition), box-shadow var(--transition), background var(--transition);
+      appearance: none;
+    }
+    .form-field input:focus,
+    .form-field select:focus,
+    .form-field textarea:focus {
+      border-color: var(--green);
+      background: var(--white);
+      box-shadow: 0 0 0 3px rgba(30,74,53,.08);
+    }
+    .form-field textarea { resize: vertical; min-height: 140px; }
+
+    /* Subject select with custom arrow */
+    .select-wrap { position: relative; }
+    .select-wrap::after {
+      content: '\f107';
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--mid);
+      pointer-events: none;
+    }
+    .select-wrap select { padding-right: 40px; }
+
+    .form-submit {
+      width: 100%;
+      padding: 16px;
+      border-radius: 50px;
+      background: var(--green);
+      color: var(--white);
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    .form-submit:hover {
+      background: var(--gold);
+      color: var(--green);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(232,160,32,.35);
+    }
+    .form-submit:disabled {
+      opacity: .6;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    /* Success / error states */
+    .form-feedback {
+      display: none;
+      padding: 16px 20px;
+      border-radius: 10px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-top: 16px;
+      align-items: center;
+      gap: 10px;
+    }
+    .form-feedback.success {
+      background: #EBF7F0;
+      color: #1A6B41;
+      border: 1px solid #A7DFC2;
+      display: flex;
+    }
+    .form-feedback.error {
+      background: #FEF2F2;
+      color: #B91C1C;
+      border: 1px solid #FECACA;
+      display: flex;
+    }
+    .form-note {
+      font-size: 0.8rem;
+      color: var(--mid);
+      text-align: center;
+      margin-top: 16px;
+    }
+
+    /* ===== FAQ ===== */
+    .faq-section { background: var(--white); }
+    .faq-section .section-head { margin-bottom: 48px; }
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .faq-item {
+      background: var(--linen);
+      border-radius: var(--radius);
+      padding: 28px;
+      border-left: 4px solid var(--gold);
+    }
+    .faq-item h3 {
+      font-size: 0.98rem;
+      color: var(--green);
+      margin-bottom: 10px;
+    }
+    .faq-item p {
+      font-size: 0.88rem;
+      color: var(--mid);
+      line-height: 1.7;
+    }
+
+    /* Responsive */
+    @media (max-width: 960px) {
+      .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+      .contact-info { position: static; }
+      .form-row { grid-template-columns: 1fr; }
+      .faq-grid { grid-template-columns: 1fr; }
+      .contact-form-wrap { padding: 32px 24px; }
+    }
+  </style>
+</head>
+<body>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NH9BJQGL" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="logo">
+          <img src="Images/SunflowerTransparent03.png" alt="Sunflower Laundry Soap logo">
+          <div class="logo-text-wrap">
+            <span class="logo-name">Sunflower</span>
+            <span class="logo-tag">Laundry Soap</span>
+          </div>
+        </a>
+        <nav aria-label="Main navigation">
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contact.html" class="active nav-cta">Contact Us</a></li>
+          </ul>
+        </nav>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="mobile-nav" id="mobileNav" aria-hidden="true" role="dialog">
+    <div class="mobile-nav-backdrop" id="mobileBackdrop"></div>
+    <div class="mobile-nav-panel">
+      <button class="mobile-nav-close" id="mobileClose" aria-label="Close menu">&times;</button>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="products.html">Products</a>
+      <a href="contact.html" class="active">Contact Us</a>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <div class="container">
+        <nav class="page-hero-breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span aria-hidden="true">›</span>
+          <span aria-current="page">Contact</span>
+        </nav>
+        <h1>Let's talk</h1>
+        <p>Whether you want to order, book a session, or just ask a question — we'd love to hear from you. We're usually just a WhatsApp away.</p>
+      </div>
+    </section>
+
+    <!-- CONTACT MAIN -->
+    <section class="contact-section" aria-labelledby="contact-h2">
+      <div class="container">
+        <div class="contact-grid">
+
+          <!-- LEFT: Info panel -->
+          <div>
+            <div class="contact-info">
+              <h2>Contact details</h2>
+              <p>Reach us through any of these channels. We typically respond within a few hours on business days.</p>
+
+              <div class="contact-detail">
+                <div class="contact-detail-icon"><i class="fas fa-phone" aria-hidden="true"></i></div>
+                <div class="contact-detail-text">
+                  <strong>Phone</strong>
+                  <a href="tel:+256700610928">+256 700 610 928</a>
+                </div>
+              </div>
+
+              <div class="contact-detail">
+                <div class="contact-detail-icon"><i class="fab fa-whatsapp" aria-hidden="true"></i></div>
+                <div class="contact-detail-text">
+                  <strong>WhatsApp</strong>
+                  <a href="https://wa.me/+256700610928" target="_blank" rel="noopener">+256 700 610 928</a>
+                </div>
+              </div>
+
+              <div class="contact-detail">
+                <div class="contact-detail-icon"><i class="fas fa-envelope" aria-hidden="true"></i></div>
+                <div class="contact-detail-text">
+                  <strong>Email</strong>
+                  <a href="mailto:angura.resty@gmail.com">angura.resty@gmail.com</a>
+                </div>
+              </div>
+
+              <div class="contact-detail">
+                <div class="contact-detail-icon"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></div>
+                <div class="contact-detail-text">
+                  <strong>Location</strong>
+                  <span>Kampala, Uganda</span>
+                </div>
+              </div>
+
+              <div class="contact-divider" aria-hidden="true"></div>
+
+              <p class="contact-social-label">Follow us</p>
+              <div class="contact-socials">
+                <a href="https://www.facebook.com/profile.php?id=61556812120793" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/tutas.laundry.produc?igsh=MTRzZGk2ZmZlNGY5cw==" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/+256700610928" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+              </div>
+
+              <div class="contact-divider" aria-hidden="true"></div>
+
+              <p class="contact-social-label">Fastest way to reach us</p>
+              <div class="quick-btns">
+                <a href="https://wa.me/+256700610928?text=Hi%20Sunflower%21%20I%27d%20like%20to%20enquire%20about%20your%20products." 
+                   class="quick-btn wa" 
+                   target="_blank" 
+                   rel="noopener">
+                  <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                  Chat on WhatsApp
+                </a>
+                <a href="tel:+256700610928" class="quick-btn tel">
+                  <i class="fas fa-phone" aria-hidden="true"></i>
+                  Call Us Now
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT: Form -->
+          <div class="contact-form-wrap">
+            <h2 id="contact-h2" class="form-heading accent-heading">Send us a message</h2>
+            <p class="form-subhead">Fill in the form below and we'll get back to you as soon as possible.</p>
+
+            <!--
+              IMPORTANT: Replace YOUR_FORMSPREE_ID below with your actual Formspree form ID.
+              You can find this in your Formspree dashboard at formspree.io.
+              Example: action="https://formspree.io/f/xabc1234"
+            -->
+            <form
+              id="contactForm"
+              action="https://formspree.io/f/YOUR_FORMSPREE_ID"
+              method="POST"
+              novalidate
+            >
+              <!-- Honeypot anti-spam field (hidden) -->
+              <input type="text" name="_gotcha" style="display:none;" tabindex="-1" autocomplete="off">
+
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="firstName">First Name <span class="req" aria-hidden="true">*</span></label>
+                  <input type="text" id="firstName" name="firstName" placeholder="e.g. Resty" required autocomplete="given-name">
+                </div>
+                <div class="form-field">
+                  <label for="lastName">Last Name</label>
+                  <input type="text" id="lastName" name="lastName" placeholder="e.g. Angura" autocomplete="family-name">
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label for="email">Email Address <span class="req" aria-hidden="true">*</span></label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email">
+              </div>
+
+              <div class="form-field">
+                <label for="phone">Phone / WhatsApp</label>
+                <input type="tel" id="phone" name="phone" placeholder="+256 700 000 000" autocomplete="tel">
+              </div>
+
+              <div class="form-field">
+                <label for="subject">What's this about? <span class="req" aria-hidden="true">*</span></label>
+                <div class="select-wrap">
+                  <select id="subject" name="subject" required>
+                    <option value="" disabled selected>Select a topic…</option>
+                    <option value="product-order">Ordering products</option>
+                    <option value="consultancy">Book a consultancy session</option>
+                    <option value="tutorial">Book a soap-making tutorial</option>
+                    <option value="training">Rescue training enquiry</option>
+                    <option value="wholesale">Wholesale / bulk order</option>
+                    <option value="other">Something else</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label for="message">Message <span class="req" aria-hidden="true">*</span></label>
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Tell us how we can help. The more detail, the better!"
+                  required
+                  minlength="20"
+                ></textarea>
+              </div>
+
+              <button type="submit" class="form-submit" id="submitBtn">
+                <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                Send Message
+              </button>
+
+              <!-- Success feedback -->
+              <div class="form-feedback success" id="successMsg" role="alert" aria-live="polite">
+                <i class="fas fa-check-circle" aria-hidden="true"></i>
+                Message sent! We'll get back to you soon.
+              </div>
+
+              <!-- Error feedback -->
+              <div class="form-feedback error" id="errorMsg" role="alert" aria-live="polite">
+                <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
+                Something went wrong. Please try again or message us on WhatsApp.
+              </div>
+
+              <p class="form-note">
+                <i class="fas fa-lock" style="color:var(--sage);font-size:.8rem;" aria-hidden="true"></i>
+                Your details are kept private and never shared.
+              </p>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section" aria-labelledby="faq-h2">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-label">Common Questions</p>
+          <h2 id="faq-h2" class="accent-heading">Frequently asked</h2>
+        </div>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <h3>Where do you deliver?</h3>
+            <p>We currently deliver across Kampala and can arrange courier dispatch to other parts of Uganda. Contact us for delivery costs to your area.</p>
+          </div>
+          <div class="faq-item">
+            <h3>How do I book a tutorial or consultancy?</h3>
+            <p>The quickest way is via WhatsApp. Send us a message with your preferred dates and we'll confirm within 24 hours.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Are your soaps suitable for sensitive skin?</h3>
+            <p>Yes — our bars are free from synthetic fragrances, sulfates, and parabens, making them suitable for most sensitive skin types. Always patch-test if in doubt.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Do you offer bulk / wholesale pricing?</h3>
+            <p>Yes. We work with schools, hotels, and laundry businesses. Send us your quantity requirements and we'll provide a tailored quote.</p>
+          </div>
+          <div class="faq-item">
+            <h3>How long does a bar last?</h3>
+            <p>One bar handles approximately 30–40 laundry washes depending on load size and usage. Store it in a dry place between uses to maximise its life.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Can I pay via Mobile Money?</h3>
+            <p>Yes — we accept MTN Mobile Money and Airtel Money. Payment details are shared at checkout or via WhatsApp when you order.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" class="logo">
+              <img src="Images/SunflowerTransparent03.png" alt="" style="width:44px;height:44px;filter:brightness(0) invert(1);opacity:.8;">
+              <div class="logo-text-wrap">
+                <span class="logo-name">Sunflower</span>
+                <span class="logo-tag">Laundry Soap</span>
+              </div>
+            </a>
+            <p>Natural, handmade laundry soap crafted in Uganda. Gentle on clothes, kind to the earth.</p>
+            <div class="footer-socials">
+              <a href="https://wa.me/+256700610928" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+              <a href="https://www.facebook.com/profile.php?id=61556812120793" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.instagram.com/tutas.laundry.produc?igsh=MTRzZGk2ZmZlNGY5cw==" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="mailto:angura.resty@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Navigate</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contact</h4>
+            <ul>
+              <li><a href="tel:+256700610928">+256 700 610 928</a></li>
+              <li><a href="mailto:angura.resty@gmail.com">angura.resty@gmail.com</a></li>
+              <li><a href="https://wa.me/+256700610928" target="_blank" rel="noopener">WhatsApp Chat</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Sunflower Laundry Soap. All rights reserved.</p>
+          <p>Handmade in Uganda with love.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="float-bar" aria-label="Quick contact">
+    <a class="float-btn wa" href="https://wa.me/+256700610928" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    <a class="float-btn tel" href="tel:+256700610928" aria-label="Call"><i class="fas fa-phone"></i></a>
+  </div>
+
+  <script>
+    // ===== Mobile nav =====
+    const hamburger=document.getElementById('hamburger');
+    const mobileNav=document.getElementById('mobileNav');
+    const mobileClose=document.getElementById('mobileClose');
+    const backdrop=document.getElementById('mobileBackdrop');
+    function openNav(){mobileNav.classList.add('open');mobileNav.setAttribute('aria-hidden','false');hamburger.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';}
+    function closeNav(){mobileNav.classList.remove('open');mobileNav.setAttribute('aria-hidden','true');hamburger.setAttribute('aria-expanded','false');document.body.style.overflow='';}
+    hamburger.addEventListener('click',openNav);
+    mobileClose.addEventListener('click',closeNav);
+    backdrop.addEventListener('click',closeNav);
+    document.addEventListener('keydown',e=>{if(e.key==='Escape')closeNav();});
+
+    // ===== Contact form (Formspree async submit) =====
+    const form       = document.getElementById('contactForm');
+    const submitBtn  = document.getElementById('submitBtn');
+    const successMsg = document.getElementById('successMsg');
+    const errorMsg   = document.getElementById('errorMsg');
+
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      successMsg.style.display = 'none';
+      errorMsg.style.display   = 'none';
+
+      // Basic client-side validation
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending…';
+
+      try {
+        const data = new FormData(form);
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          // Success
+          successMsg.style.display = 'flex';
+          form.reset();
+          submitBtn.innerHTML = '<i class="fas fa-check"></i> Sent!';
+          setTimeout(() => {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+          }, 4000);
+        } else {
+          throw new Error('Server error');
+        }
+      } catch (err) {
+        errorMsg.style.display = 'flex';
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+      }
+    });
+  </script>
+</body>
+</html>
